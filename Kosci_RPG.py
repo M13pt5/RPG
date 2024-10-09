@@ -88,8 +88,8 @@ def main():
             res_1 = any('-' in sub for sub in Board_1)
             res_2 = any('-' in sub for sub in Board_2)
             if not res_1 and not res_2:
-                Wynik(Board_1)
-                Wynik(Board_2)
-                break
+                return Wynik(Board_1), Wynik(Board_2)
 
-main()
+result = main()
+print(f"Team 1 uzyskał: {result[0]} punktów")
+print(f"Team 2 uzyskał: {result[1]} punktów")
